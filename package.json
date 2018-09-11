@@ -10,16 +10,16 @@
     "node": ">=4.7.2"
   },
   "keywords": [
-    "Weather",
+    "weather",
     "cli",
-    "Command Line"
+    "terminal"
   ],
   "author": "Jacob D. Castro",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/jacobdcastro/cli-weather-app/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/jacobdcastro/cli-weather-app",
   "dependencies": {
     "cli-table2": "^0.2.0",
     "colors": "^1.3.2"
