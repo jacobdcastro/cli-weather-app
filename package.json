@@ -1,0 +1,27 @@
+{
+  "name": "cli-weather",
+  "version": "0.1.1",
+  "description": "A cool little weather app accessible in your terminal!",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=4.7.2"
+  },
+  "keywords": [
+    "Weather",
+    "cli",
+    "Command Line"
+  ],
+  "author": "Jacob D. Castro",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "cli-table2": "^0.2.0",
+    "colors": "^1.3.2"
+  }
+}
