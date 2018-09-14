@@ -118,6 +118,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+console.log("");
 rl.question('Enter a city name or zip code for the weather! => ', (input) => {
   setURL(input);
   rl.close();
