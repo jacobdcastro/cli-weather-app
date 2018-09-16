@@ -6,15 +6,18 @@ const Colors = require('colors');
 const key = '249ad9bf13a489eef80dba6c78c933be';
 var inputType = "";
 var url = "";
+const time = Date();
 
 // 6. once all data is recieved, print the table to the console
 function buildTable(city, temp, desc, hum, windSpd, windDir) {
+
   var table = new Table({
     head: ['Weather!'],
     colWidths: [14, 17]
   });
   table.push(
-    ['Area:', `${city}`],
+    ['When:',         `${time}`],
+    ['Area:',         `${city}`],
     ['Temperature:',  `${temp} F`],
     ['Sky:',          `${desc}`],
     ['Wind:',         `${windSpd}mph ${windDirection(windDir)}`],
