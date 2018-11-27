@@ -1,5 +1,5 @@
 {
-  "name": "cli-weather",
+  "name": "cli-weather-app",
   "version": "0.1.1",
   "description": "A cool little weather app accessible in your terminal!",
   "main": "app.js",
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/jacobdcastro/cli-weather-app",
   "dependencies": {
     "cli-table2": "^0.2.0",
-    "colors": "^1.3.2"
+    "colors": "^1.3.2",
+    "lodash": "^4.17.11"
   }
 }
