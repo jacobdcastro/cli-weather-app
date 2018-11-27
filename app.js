@@ -12,14 +12,14 @@ const time = Date();
 function buildTable(city, temp, desc, hum, windSpd, windDir) {
 
   var table = new Table({
-    head: ['Weather!'],
-    colWidths: [14, 17]
+    head: [{colSpan:2,content:'Weather!'}],
+    colWidths: [14, 20]
   });
   table.push(
-    ['When:',         `${time}`],
-    ['Area:',         `${city}`],
+    [{colSpan:2,content:time}],
+    ['Area:',         city],
     ['Temperature:',  `${temp} F`],
-    ['Sky:',          `${desc}`],
+    ['Sky:',          desc],
     ['Wind:',         `${windSpd}mph ${windDirection(windDir)}`],
     ['Humidity',      `${hum}%`]
   );
@@ -113,7 +113,6 @@ function setURL(input) {
    url = `https://api.openweathermap.org/data/2.5/weather?APPID=${key}&${inputType}=${input}&units=imperial`;
    getData(url, input);
 }
-
 
 // 1. ask for zip code to search for in api
 const rl = readline.createInterface({
