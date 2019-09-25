@@ -1,7 +1,7 @@
 {
   "name": "cli-weather-app",
-  "version": "0.1.1",
-  "description": "A cool little weather app accessible in your terminal!",
+  "version": "0.2.0",
+  "description": "A cool little weather app in your terminal!",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -22,7 +22,6 @@
   "homepage": "https://github.com/jacobdcastro/cli-weather-app",
   "dependencies": {
     "cli-table2": "^0.2.0",
-    "colors": "^1.3.2",
-    "lodash": "^4.17.11"
+    "colors": "^1.4.0"
   }
 }
