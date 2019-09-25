@@ -5,13 +5,13 @@ const Table = require('cli-table2');
 const Colors = require('colors');
 
 const key = '249ad9bf13a489eef80dba6c78c933be';
-var inputType = '';
-var url = '';
+let inputType = '';
+let url = '';
 const time = Date();
 
 // 6. once all data is recieved, print the table to the console
 const buildTable = (city, temp, desc, hum, windSpd, windDir) => {
-  var table = new Table({
+  let table = new Table({
     head: [{ colSpan: 2, content: 'Weather!' }],
     colWidths: [14, 20],
   });
@@ -34,7 +34,7 @@ const printError = error => {
 // 2. get the weather data in a specific location
 const getData = (url, input) => {
   // const readableQuery = query.replace('_', ' ');
-  var request = https.get(url, response => {
+  const request = https.get(url, response => {
     try {
       // 3.1 only run if fetch was successful
       if (response.statusCode === 200) {
@@ -82,7 +82,6 @@ const getData = (url, input) => {
         );
         console.error(statusCodeError);
       }
-      // request.on('error', printError(error.message));
     } catch (error) {
       printError(error);
     }
@@ -90,7 +89,7 @@ const getData = (url, input) => {
 };
 
 const windDirection = dir => {
-  var x = parseFloat(dir);
+  const x = parseFloat(dir);
   if ((x > 335.0 && x <= 365.0) || (x > 0 && x <= 25.0)) {
     return 'N';
   } else if (x > 25.0 && x <= 65.0) {
@@ -116,12 +115,8 @@ const windDirection = dir => {
 
 const setURL = input => {
   if (isNaN(input) === false) {
-    // console.log(input);
-    // console.log('Is a number!');
     inputType = 'zip';
   } else if (isNaN(input)) {
-    // console.log(input);
-    // console.log('Not a number!');
     inputType = 'q';
   }
   url = `https://api.openweathermap.org/data/2.5/weather?APPID=${key}&${inputType}=${input}&units=imperial`;
