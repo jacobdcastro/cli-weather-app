@@ -23,5 +23,12 @@
   "dependencies": {
     "cli-table2": "^0.2.0",
     "colors": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacobdcastro/cli-weather-app"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
